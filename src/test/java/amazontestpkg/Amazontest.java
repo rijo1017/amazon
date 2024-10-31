@@ -65,7 +65,8 @@ public class Amazontest extends Basecl {
                    
 		
           }
-		
+	 aa.primemembership("80888rrr");
+			
 	}
 	
 }

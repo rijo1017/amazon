@@ -389,10 +389,10 @@ public class Amazonpage {
 	  JavascriptExecutor js = (JavascriptExecutor) driver;
      js.executeScript("window.scrollBy(0,-200)");
       try {
-     // driver.findElement(gotocart).click();
+     
     	  WebElement element3 = driver.findElement(By.xpath("//*[@id=\"ewc-compact-actions-container\"]/div/div[2]/span/span/a"));
     	    element3.click();
-    //  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    
       WebElement checkb = driver.findElement(By.xpath("//*[@id=\"gutterCartViewForm\"]/div/div[3]/div[2]/span/div/label/i")); 
       checkb.click();
       }
@@ -405,8 +405,7 @@ public class Amazonpage {
   }
   
   public void loginfunctionality(String phno,String pass)//verify the user can enter the emailid and password
-  { // JavascriptExecutor js = (JavascriptExecutor) driver;
-  //js.executeScript("window.scrollBy(0,200)"); 
+  {  
 	driver.findElement(signin).click();
 	driver.findElement(emailmobilefield).sendKeys(phno);
 	driver.findElement(continuebutton).click();
@@ -429,7 +428,7 @@ public class Amazonpage {
        Set<String> allWindows = driver.getWindowHandles();
        List<String> windowList = new ArrayList<>(allWindows);
        if (windowList.size() == 3) {
-    	    // Switch to the second window (index 1)
+    	    
     	    driver.switchTo().window(windowList.get(2));
     	    System.out.println("Switched to second window with title: " + driver.getTitle());
     	    driver.findElement(ratings).click();
@@ -523,9 +522,7 @@ public class Amazonpage {
 	  driver.findElement(cart).click();
 	  driver.findElement(qtydd).click();
 	  WebElement qtydropdown = driver.findElement(By.xpath("//*[@id=\"a-autoid-0-announce\"]"));
-	 // Select select = new Select(qtydropdown);
-	  //select.selectByVisibleText("3");
-	 // select.selectByValue("3");
+	 
 	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
       wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"a-popover-1\"]/div/div/ul/li[2]")));
       WebElement desiredOption = driver.findElement(By.xpath("//*[@id=\"a-popover-1\"]/div/div/ul/li[2]")); 
@@ -537,7 +534,7 @@ public class Amazonpage {
 	  driver.findElement(starthere).click();
   }
   
-  public void datadriventesting(String usn,String phnu)
+  public void datadriventesting(String usn,String phnu)//verify different set of values can be inserted in the given field
   {
 	  
 	  

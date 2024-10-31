@@ -46,7 +46,7 @@ public class Amazontest extends Basecl {
 		aa.footerlogotest();
 		aa.increasethequanityoftheproduct();
 		
-		String xl = "amazon.xlsx";
+		String xl = "src/test/java/amazontestpkg/amazon.xlsx";
 		
 		  String Sheet = "Sheet1";
 

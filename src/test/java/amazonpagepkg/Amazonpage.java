@@ -52,6 +52,11 @@ public class Amazonpage {
 	By fn=By.xpath("//*[@id=\"ap_customer_name\"]");
 	By phn=By.xpath("//*[@id=\"ap_phone_number\"]");
 	By vuid=By.xpath("//*[@id=\"mobileClaimDisclosureMessageRelaxed\"]");
+	By amba=By.xpath("//*[@id=\"a-page\"]/div[1]/div[1]/div/a");
+	By primeme=By.xpath("//*[@id=\"nav-link-amazonprime\"]");
+	By prmelo=By.xpath("//*[@id=\"a-autoid-0\"]/span");
+	By primeemm=By.xpath("//*[@id=\"ap_email\"]");
+	By cob=By.xpath("//*[@id=\"continue\"]");
 	
 	public Amazonpage(WebDriver driver)
 	{
@@ -547,6 +552,26 @@ public class Amazonpage {
 	  
 	  
   }
+	 public void primemembership(String emmm)
+  
+  {
+	  driver.findElement(amba).click();
+	  driver.findElement(primeme).click();
+	  driver.findElement(prmelo).click();
+	  driver.findElement(primeemm).sendKeys(emmm);
+	  driver.findElement(cob).click();
+	  WebElement gg=driver.findElement(By.xpath("//*[@id=\"authportal-main-section\"]/div[2]/div[2]/div[1]/form/div/div/div"));
+	 String ff= gg.getText();
+	  if (ff.contains( "  Enter a valid email address or phone number"))
+	  {
+		  System.out.println("numbers  and alphabets cannot be inserted in email field");
+	  }
+	  else
+	  {
+		  System.out.println("numbers and characters can be  can beinserted in email field");
+	  }
+  }
+	  
   
   
   

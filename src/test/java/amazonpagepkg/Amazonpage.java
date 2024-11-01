@@ -381,7 +381,7 @@ public class Amazonpage {
 	   }
 	 }
 	 catch (org.openqa.selenium.NoSuchElementException e) {
-         // Catch exception if element is not found
+         
          System.out.println("Element not found: " + e.getMessage());
      }
   }
@@ -389,7 +389,7 @@ public class Amazonpage {
 
   
   
-  public void checkbox()
+  public void checkbox()//verify the checkbox can be ticked
   {
 	  JavascriptExecutor js = (JavascriptExecutor) driver;
      js.executeScript("window.scrollBy(0,-200)");
@@ -402,7 +402,7 @@ public class Amazonpage {
       checkb.click();
       }
       catch (org.openqa.selenium.NoSuchElementException e) {
-          // Catch exception if element is not found
+          
           System.out.println("Element not found: " + e.getMessage());
       }
       
@@ -552,7 +552,7 @@ public class Amazonpage {
 	  
 	  
   }
-	 public void primemembership(String emmm)
+	 public void primemembership(String emmm)//verify the prime membership can be selected and the user can access the login field
   
   {
 	  driver.findElement(amba).click();
